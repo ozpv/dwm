@@ -7,4 +7,5 @@ https://dwm.suckless.org/
 - anybar
 - focusonclick
 - fullscreen
+- fixborders
 - gruvbox theme
