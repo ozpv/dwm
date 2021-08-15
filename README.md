@@ -2,10 +2,9 @@
 https://dwm.suckless.org/
 
 ## patches
-- activetagindicatorbar
 - fullgaps
 - anybar
-- focusonclick
 - fullscreen
 - fixborders
+- bar height
 - gruvbox theme
