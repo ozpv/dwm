@@ -68,9 +68,10 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *dmenunmcmd[] = { "networkmanager_dmenu", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
-static const char *volup[] = { "amixer", "set", "Master", "10%+", NULL };
-static const char *voldown[] = { "amixer", "set", "Master", "10%-", NULL };
-static const char *volmute[] = { "amixer", "set", "Master", "0%", NULL };
+static const char *volup[] = { "pactl", "set-sink-volume", "0", "+10%", NULL };
+static const char *voldown[] = { "pactl", "set-sink-volume", "0", "-10%", NULL };
+static const char *volmax[] = { "pactl", "set-sink-volume", "0", "100%", NULL };
+static const char *volmute[] = { "pactl", "set-sink-volume", "0", "0%", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -80,7 +81,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_j,      spawn,          {.v = volup } },
 	{ MODKEY,                       XK_k,      spawn,          {.v = voldown } },
-	{ MODKEY,                       XK_l,      spawn,          {.v = volmute } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = volmax } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = volmute } },
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	//{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
