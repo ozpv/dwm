@@ -11,8 +11,8 @@ static const int usealtbar          = 0;        /* 1 means use non-dwm status ba
 static const char *altbarclass      = "Polybar";/* Alternate bar class name */
 static const char *alttrayname      = "tray";   /* Polybar tray instance name */
 static const char *altbarcmd        = "";       /* Alternate bar launch command */
-static const char *fonts[]          = { "FiraCode-Regular:size=10", "Iosevka Nerd Font:size=10"};
-static const char dmenufont[]       = "FiraCode-Regular:size=10";
+static const char *fonts[]          = { "FiraCode Nerd Font Mono:style=Regular:size=10" };
+static const char dmenufont[]       = "FiraCode Nerd Font Mono:style=Regular:size=10";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#928374";
 static const char col_gray3[]       = "#ebdbb2";
@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
