@@ -74,8 +74,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_space,  spawn,          {.v = dmenunmcmd } },
     { MODKEY,                       XK_a,      spawn,          {.v = termcmd } },
     { MODKEY,                       XK_f,      spawn,          {.v = browsercmd } },
-    { MODKEY,                       XK_j,      spawn,          {.v = volup } },
-    { MODKEY,                       XK_k,      spawn,          {.v = voldown } },
+    { MODKEY,                       XK_j,      spawn,          {.v = voldown } },
+    { MODKEY,                       XK_k,      spawn,          {.v = volup } },
     { MODKEY,                       XK_l,      spawn,          {.v = volmax } },
     { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = volmute } },
 
