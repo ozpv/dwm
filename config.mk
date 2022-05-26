@@ -4,6 +4,7 @@ VERSION = 6.3
 # Customize below to fit your system
 
 # paths
+USRHOME ?= /home/ozpv
 PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
