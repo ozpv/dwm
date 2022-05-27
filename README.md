@@ -9,7 +9,8 @@ https://dwm.suckless.org/
 - actualfullscreen
 
 ## installation
-```git clone https://github.com/ozpv/dwm.git
+```
+git clone https://github.com/ozpv/dwm.git
 cd dwm
 sudo make install
 ```
