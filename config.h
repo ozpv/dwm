@@ -64,10 +64,10 @@ static const char *dmenupmcmd[] = { "powermenu", NULL };
 static const char *dmenunmcmd[] = { "networkmanager_dmenu", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
-static const char *volup[] = { "pactl", "set-sink-volume", "0", "+10%", NULL };
-static const char *voldown[] = { "pactl", "set-sink-volume", "0", "-10%", NULL };
-static const char *volmax[] = { "pactl", "set-sink-volume", "0", "100%", NULL };
-static const char *volmute[] = { "pactl", "set-sink-volume", "0", "0%", NULL };
+static const char *volup[] = { "pactl", "set-sink-volume", "1", "+10%", NULL };
+static const char *voldown[] = { "pactl", "set-sink-volume", "1", "-10%", NULL };
+static const char *volmax[] = { "pactl", "set-sink-volume", "1", "100%", NULL };
+static const char *volmute[] = { "pactl", "set-sink-volume", "1", "0%", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
