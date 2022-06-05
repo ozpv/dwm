@@ -24,4 +24,4 @@ sudo make install
 ```
 
 ### powermenu installation
-See (dwm/powermenu installation)[https://github.com/ozpv/dotfiles#dwmpowermenu-installation]
+See [dwm/powermenu installation](https://github.com/ozpv/dotfiles#dwmpowermenu-installation)
