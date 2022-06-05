@@ -10,7 +10,15 @@ https://dwm.suckless.org/
 
 ## installation
 ```
-git clone https://github.com/ozpv/dwm.git
+git clone https://github.com/ozpv/dwm
 cd dwm
+sudo make install
+```
+## other
+
+### status bar installation
+```
+git clone https://github.com/ozpv/dwmblocks
+cd dwmblocks
 sudo make install
 ```
