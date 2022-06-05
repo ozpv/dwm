@@ -22,3 +22,6 @@ git clone https://github.com/ozpv/dwmblocks
 cd dwmblocks
 sudo make install
 ```
+
+### powermenu installation
+See (dwm/powermenu installation)[https://github.com/ozpv/dotfiles#dwmpowermenu-installation]
