@@ -1,0 +1,8 @@
+#!/bin/sh
+case "$(echo "Poweroff \nReboot ﰇ\nSuspend ⏾\nCancel ﰸ" | dmenu)" in
+    "Poweroff ") sudo poweroff ;;
+    "Reboot ﰇ") sudo reboot ;;
+    "Suspend ⏾") sudo ZZZ -z ;;
+    "Cancel ﰸ") exit ;;
+    *) exit ;;
+esac
