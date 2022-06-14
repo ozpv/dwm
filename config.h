@@ -60,39 +60,31 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenunmcmd[] = { "sudo", "networkmanager_dmenu", NULL };
-static const char *dmenupmcmd[] = { "powermenu", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[] = { "firefox", NULL };
-static const char *volup[] = { "pactl", "set-sink-volume", "1", "+10%", NULL };
-static const char *voldown[] = { "pactl", "set-sink-volume", "1", "-10%", NULL };
-static const char *volmax[] = { "pactl", "set-sink-volume", "1", "100%", NULL };
-static const char *volmute[] = { "pactl", "set-sink-volume", "1", "0%", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
-    { MODKEY|ShiftMask,             XK_space,  spawn,          {.v = dmenunmcmd } },
-    { MODKEY,                       XK_a,      spawn,          {.v = termcmd } },
-    { MODKEY,                       XK_f,      spawn,          {.v = browsercmd } },
-    { MODKEY,                       XK_j,      spawn,          {.v = voldown } },
-    { MODKEY,                       XK_k,      spawn,          {.v = volup } },
-    { MODKEY,                       XK_l,      spawn,          {.v = volmax } },
-    { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = volmute } },
+    { MODKEY|ShiftMask,             XK_space,  spawn,          SHCMD("sudo networkmanager_dmenu") },
+    { MODKEY,                       XK_a,      spawn,          SHCMD("st") },
+    { MODKEY,                       XK_f,      spawn,          SHCMD("firefox") },
+    { MODKEY,                       XK_k,      spawn,          SHCMD("pactl set-sink-volume 1 +10%") },
+    { MODKEY,                       XK_j,      spawn,          SHCMD("pactl set-sink-volume 1 -10%") },
+    { MODKEY,                       XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 100%") },
+    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 0%") },
+    { MODKEY,                       XK_p,      spawn,          SHCMD("mpc play") },
+    { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc pause") },
+    { MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("st ncmpcpp") },
 
     { MODKEY,                       XK_b,      togglebar,      {0} },
-    { MODKEY,                       XK_Tab,    view,           {0} },
-    { MODKEY,                       XK_w,      killclient,     {0} },
     { MODKEY|ShiftMask,             XK_m,      togglefullscr,  {0} },
     { MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
-    { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-    { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-    { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+    { MODKEY,                       XK_comma,  tagmon,         {.i = -1 } },
+    { MODKEY,                       XK_period, tagmon,         {.i = +1 } },
 
     { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+    { MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = 0  } },
     { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
@@ -104,7 +96,8 @@ static Key keys[] = {
     TAGKEYS(                        XK_8,                      7)
     TAGKEYS(                        XK_9,                      8)
 
-    { MODKEY,                       XK_q,      spawn,          {.v = dmenupmcmd} },
+    { MODKEY,                       XK_w,      killclient,     {0} },
+    { MODKEY,                       XK_q,      spawn,          SHCMD("powermenu") },
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
@@ -115,7 +108,7 @@ static Button buttons[] = {
     { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
     { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
     { ClkWinTitle,          0,              Button2,        zoom,           {0} },
-    { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+    { ClkStatusText,        0,              Button2,        spawn,          SHCMD("st") },
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
     { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
     { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
