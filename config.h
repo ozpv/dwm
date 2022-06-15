@@ -67,14 +67,18 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_space,  spawn,          SHCMD("sudo networkmanager_dmenu") },
     { MODKEY,                       XK_a,      spawn,          SHCMD("st") },
     { MODKEY,                       XK_f,      spawn,          SHCMD("firefox") },
+
     { MODKEY,                       XK_k,      spawn,          SHCMD("pactl set-sink-volume 1 +10%") },
     { MODKEY,                       XK_j,      spawn,          SHCMD("pactl set-sink-volume 1 -10%") },
     { MODKEY,                       XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 100%") },
     { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 0%") },
+
     { MODKEY,                       XK_p,      spawn,          SHCMD("mpc play") },
     { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc pause") },
     { MODKEY,                       XK_n,      spawn,          SHCMD("mpc next") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("st ncmpcpp") },
+
+    { MODKEY,                       XK_Print,  spawn,          SHCMD("maim -s ~/Pictures/$(date +%s).png") },
 
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_m,      togglefullscr,  {0} },
