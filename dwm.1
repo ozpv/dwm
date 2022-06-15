@@ -49,111 +49,107 @@ label toggles between tiled and floating layout.
 .B Button3
 click on a tag label adds/removes all windows with that tag to/from the view.
 .TP
-.B Mod1\-Button1
+.B Alt\-Button1
 click on a tag label applies that tag to the focused window.
 .TP
-.B Mod1\-Button3
+.B Alt\-Button3
 click on a tag label adds/removes that tag to/from the focused window.
-.SS Keyboard commands
+.SS Programs & system utilities 
 .TP
-.B Mod1\-Shift\-Return
-Start
+.B Alt\-a
+Spawn
 .BR st(1).
 .TP
-.B Mod1\-p
+.B Alt\-f
+Spawn firefox.
+.TP
+.B Alt\-space
 Spawn
 .BR dmenu(1)
 for launching other programs.
 .TP
-.B Mod1\-,
-Focus previous screen, if any.
+.B Alt\-Shift\-space
+Spawn networkmanager_dmenu for configuring and managing networking via 
+.BR dmenu(1).
 .TP
-.B Mod1\-.
-Focus next screen, if any.
+.B Alt\-Print Screen
+Select an area to screenshot via maim. Saves to ~/Pictures. 
 .TP
-.B Mod1\-Shift\-,
-Send focused window to previous screen, if any.
+.SS Volume/Music control via pulseaudio & mpd. 
+.B Alt\-k
+Increase volume by 10%. 
 .TP
-.B Mod1\-Shift\-.
-Send focused window to next screen, if any.
+.B Alt\-j
+Decrease volume by -10%. 
 .TP
-.B Mod1\-b
+.B Alt\-l
+Set volume to 100%. 
+.TP
+.B Alt\-Shift\-l
+Set volume to 0% (muted). 
+.TP
+.B Alt\-p
+Play song. 
+.TP
+.B Alt\-Shift\-p
+Pause song. 
+.TP
+.B Alt\-n
+Play the next song in queue. 
+.TP
+.B Alt\-Shift\-n
+Launch mpd client ncmpcpp. 
+.TP
+.SS Window, tag, bar, and gap control
+.B Alt\-b
 Toggles bar on and off.
 .TP
-.B Mod1\-t
-Sets tiled layout.
+.B Alt\-,
+Send focused window to previous screen, if any.
 .TP
-.B Mod1\-f
-Sets floating layout.
+.B Alt\-.
+Send focused window to next screen, if any.
 .TP
-.B Mod1\-m
-Sets monocle layout.
+.B Alt\-Shift\-f
+Toggles focused window floating.
 .TP
-.B Mod1\-space
-Toggles between current and previous layout.
+.B Alt\-Shift\-m
+Toggles focused window fullscreen.
 .TP
-.B Mod1\-j
-Focus next window.
+.B Alt\--
+Decrease the gap size by -1.
 .TP
-.B Mod1\-k
-Focus previous window.
+.B Alt\-Shift\--
+Set the gap size to 0.
 .TP
-.B Mod1\-i
-Increase number of windows in master area.
+.B Alt\-=
+Increase the gap size by 1.
 .TP
-.B Mod1\-d
-Decrease number of windows in master area.
+.B Alt\-[1..n]
+Moves focus to tag n.
 .TP
-.B Mod1\-l
-Increase master area size.
+.B Alt\-Shift\-[1..n]
+Moves focused window to tag n.
 .TP
-.B Mod1\-h
-Decrease master area size.
-.TP
-.B Mod1\-Return
-Zooms/cycles focused window to/from master area (tiled layouts only).
-.TP
-.B Mod1\-Shift\-c
+.B Alt\-w
 Close focused window.
 .TP
-.B Mod1\-Shift\-f
-Toggle fullscreen for focused window.
+.SS Management 
+.B Alt\-q
+Open the powermenu via
+.BR dmenu(1).
 .TP
-.B Mod1\-Shift\-space
-Toggle focused window between tiled and floating state.
-.TP
-.B Mod1\-Tab
-Toggles to the previously selected tags.
-.TP
-.B Mod1\-Shift\-[1..n]
-Apply nth tag to focused window.
-.TP
-.B Mod1\-Shift\-0
-Apply all tags to focused window.
-.TP
-.B Mod1\-Control\-Shift\-[1..n]
-Add/remove nth tag to/from focused window.
-.TP
-.B Mod1\-[1..n]
-View all windows with nth tag.
-.TP
-.B Mod1\-0
-View all windows with any tag.
-.TP
-.B Mod1\-Control\-[1..n]
-Add/remove all windows with nth tag to/from the view.
-.TP
-.B Mod1\-Shift\-q
+.B Alt\-Shift\-q
 Quit dwm.
 .SS Mouse commands
 .TP
-.B Mod1\-Button1
+.B Alt\-Button1
 Move focused window while dragging. Tiled windows will be toggled to the floating state.
 .TP
-.B Mod1\-Button2
+.B Alt\-Button2
 Toggles focused window between floating and tiled state.
 .TP
-.B Mod1\-Button3
+.B Alt\-Button3
 Resize focused window while dragging. Tiled windows will be toggled to the floating state.
 .SH CUSTOMIZATION
 dwm is customized by creating a custom config.h and (re)compiling the source
