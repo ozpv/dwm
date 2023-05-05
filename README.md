@@ -18,7 +18,7 @@ sudo make install
 
 ### status bar installation
 ```
-git clone https://github.com/ozpv/dwmblocks
-cd dwmblocks
+git clone https://github.com/ozpv/slstatus
+cd slstatus
 sudo make install
 ```
