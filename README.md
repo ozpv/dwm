@@ -5,7 +5,7 @@ https://dwm.suckless.org/
 - fullgaps
 - bar height
 - alwayscenter
-- gruvbox theme
+- gruvbox theme (not a patch anymore apparently...)
 - actualfullscreen
 
 ## installation
