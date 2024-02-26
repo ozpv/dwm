@@ -63,7 +63,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
-    { MODKEY|ShiftMask,             XK_space,  spawn,          SHCMD("sudo networkmanager_dmenu") },
+    { MODKEY|ShiftMask,             XK_space,  spawn,          SHCMD("networkmanager_dmenu") },
     { MODKEY,                       XK_a,      spawn,          SHCMD("st") },
     { MODKEY,                       XK_f,      spawn,          SHCMD("firefox") },
 
