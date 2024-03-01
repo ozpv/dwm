@@ -22,3 +22,10 @@ git clone https://github.com/ozpv/slstatus
 cd slstatus
 sudo make install
 ```
+ 
+### powermenu installation (requires dmenu)
+```
+git clone https://github.com/ozpv/powermenu
+cd powermenu
+sudo make install
+```
