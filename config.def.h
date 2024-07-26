@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 12;       /* gaps between windows */
@@ -67,10 +69,10 @@ static Key keys[] = {
     { MODKEY,                       XK_a,      spawn,          SHCMD("st") },
     { MODKEY,                       XK_f,      spawn,          SHCMD("firefox") },
 
-    { MODKEY,                       XK_k,      spawn,          SHCMD("pactl set-sink-volume 1 +10%") },
-    { MODKEY,                       XK_j,      spawn,          SHCMD("pactl set-sink-volume 1 -10%") },
-    { MODKEY,                       XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 100%") },
-    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("pactl set-sink-volume 1 0%") },
+    { MODKEY,                       XK_k,      spawn,          SHCMD("pactl set-sink-volume 0 +10%") },
+    { MODKEY,                       XK_j,      spawn,          SHCMD("pactl set-sink-volume 0 -10%") },
+    { MODKEY,                       XK_l,      spawn,          SHCMD("pactl set-sink-volume 0 100%") },
+    { MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("pactl set-sink-volume 0 0%") },
 
     { MODKEY,                       XK_p,      spawn,          SHCMD("mpc play") },
     { MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc pause") },
@@ -102,6 +104,14 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      killclient,     {0} },
     { MODKEY,                       XK_q,      spawn,          SHCMD("powermenu") },
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    /* laptop stuff */
+    { 0,                            XF86XK_AudioMute,  spawn,  SHCMD("pactl set-sink-volume 0 0%") },
+    { 0,                            XF86XK_AudioRaiseVolume,spawn,SHCMD("pactl set-sink-volume 0 +1%") },
+    { 0,                            XF86XK_AudioLowerVolume,  spawn,  SHCMD("pactl set-sink-volume 0 -1%") },
+
+
+    { 0,                            XF86XK_MonBrightnessUp,  spawn,  SHCMD("brightnessctl set 10%+") },
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,  SHCMD("brightnessctl set 10%-") },
 };
 
 /* button definitions */
