@@ -106,6 +106,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     /* laptop stuff */
     { 0,                            XF86XK_AudioMute,  spawn,  SHCMD("pactl set-sink-volume 0 0%") },
+    { MODKEY,                       XF86XK_AudioMute,  spawn,  SHCMD("pactl set-sink-volume 0 0%") },
     { 0,                            XF86XK_AudioRaiseVolume,spawn,SHCMD("pactl set-sink-volume 0 +1%") },
     { 0,                            XF86XK_AudioLowerVolume,  spawn,  SHCMD("pactl set-sink-volume 0 -1%") },
 
