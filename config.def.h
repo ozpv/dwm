@@ -11,11 +11,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 22;       /* user bar height; set to 0 if you want to use dwm's... */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Regular:size=10";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#928374";
-static const char col_gray3[]       = "#ebdbb2";
-static const char col_gray4[]       = "#ebdbb2";
-static const char col_cyan[]        = "#282828";
+static const char col_gray1[]       = "#1e1e2e";
+static const char col_gray2[]       = "#6c7086";
+static const char col_gray3[]       = "#cdd6f4";
+static const char col_gray4[]       = "#cdd6f4";
+static const char col_cyan[]        = "#1e1e2e";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
