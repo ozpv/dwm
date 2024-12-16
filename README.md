@@ -5,7 +5,7 @@ https://dwm.suckless.org/
 - fullgaps
 - bar height
 - alwayscenter
-- gruvbox theme (not a patch anymore apparently...)
+- mocha catppuccin theme
 - actualfullscreen
 
 ## installation
