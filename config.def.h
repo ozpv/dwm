@@ -4,22 +4,22 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 12;        /* gaps between windows */
+static const unsigned int gappx     = 12;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 12;        /* 2 is the default spacing around the bar's font */
+static const int user_bh            = 22;       /* user bar height; set to 0 if you want to use dwm's... */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Regular:size=10";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#928374";
-static const char col_gray3[]       = "#ebdbb2";
-static const char col_gray4[]       = "#ebdbb2";
-static const char col_cyan[]        = "#282828";
+static const char col_gray1[]       = "#1e1e2e";
+static const char col_gray2[]       = "#6c7086";
+static const char col_gray3[]       = "#cdd6f4";
+static const char col_gray4[]       = "#cdd6f4";
+static const char col_cyan[]        = "#1e1e2e";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray2  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_gray3  },
 };
 
 /* tagging */
@@ -39,7 +39,6 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
