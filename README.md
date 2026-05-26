@@ -5,7 +5,6 @@ https://dwm.suckless.org/
 - fullgaps
 - bar height
 - alwayscenter
-- mocha catppuccin theme
 - actualfullscreen
 
 ## installation
